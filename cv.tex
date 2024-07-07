@@ -1,0 +1,258 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\link}[2]{\href{#1}{\color{blue}\underline{#2}}}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemSubListStart}{\begin{itemize}}
+        \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+    \newcommand{\resumeItemSubListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+	\textbf{\Huge \scshape Zeyu (Zayne) Zhang} \\ \vspace{1pt}
+	\small \href{mailto:contact@zeyu2001.com}{\underline{contact@zeyu2001.com}} $|$
+	\href{https://zeyu2001.com}{\underline{zeyu2001.com}} $|$
+	\href{https://www.linkedin.com/in/zhang-zeyu}{\underline{www.linkedin.com/in/zhang-zeyu}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Cambridge}{Oct. 2023 -- 2026 (Expected)}
+{B.
+	A.
+	(Hons) in Computer Science}{Cambridge, England}
+\resumeItemListStart
+\resumeItem{Grade: 1st Class.
+	Top performance in Discrete Maths, Operating Systems, Software \& Security Engineering.
+}
+\resumeItem{Cybersecurity Society: Secretary (2024/25) -- Represented the University in various international competitions.}
+
+\resumeItemSubListStart
+\resumeItem{1st place at pwnEd5 finals, hosted by the University of Edinburgh.}
+\resumeItem{2nd place at the global finals of LakeCTF 2024, hosted by the Swiss Federal Institute of Technology Lausanne.}
+\resumeItem{3rd place at European finals of CSAW CTF 2023, hosted by New York University.}
+\resumeItemSubListEnd
+
+\resumeItem{
+	Hughes Hall May Ball Committee --
+	Developed \link{https://www.hughesmayball.co.uk}{www.hughesmayball.co.uk} and managed domain.
+	\textit{React $\cdot$ TailwindCSS}
+}
+\resumeItem{Hughes Hall IT \& Infrastructure Officer (2024).
+	Singapore Society Database Officer (2024/25)} \resumeItemListEnd \resumeSubHeadingListEnd
+
+\section{Experience} \resumeSubHeadingListStart
+
+\resumeSubheading {Open Government Products}{Jun.
+	%-----------EXPERIENCE-----------
+	2024 -- Present}
+{Software Engineer Intern}{Singapore}
+\resumeItemListStart
+\resumeItem{Working on the organization's GitOps access control solution, which replaces previously ClickOps-heavy HR workflows.}
+\resumeItem{Shipped a Next.js app to visualize and preview changes to access control policies, reducing human error.}
+\resumeItemListEnd
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+\resumeSubheading
+{Jane Street, Macquarie}{Mar. 2024 -- Apr. 2024}
+{First-Year Trading \& Technology Programme, Technology Spring Insight Programme}
+{London, United Kingdom}
+\vspace{2pt}
+
+\resumeSubheading
+{Cure53}{May 2023 -- Present}
+{Freelance Security Engineer}{Berlin, Germany (Remote)}
+\resumeItemListStart
+\resumeItem{Performed 15+ code audits and VAPTs for \link{https://cure53.de/\#publications}{global clients}.
+	Communicated findings to technical \& non-technical audiences.
+}
+\resumeItem{Targets included web applications, browser extensions, Electron-based desktop applications, and mobile applications.}
+\resumeItemListEnd
+\vspace{2pt}
+
+\resumeSubheading
+{TikTok}{Apr. 2023 -- Sep. 2023}
+{Security Engineer Intern}{Singapore}
+\resumeItemListStart
+\resumeItem{Discovered 50+ security vulnerabilities affecting critical internal and external facing services, such as TikTok.}
+\resumeItem{Developed Java extension on Burp Suite's new Montoya API for testing protobuf over both WebSockets and HTTP(s), a feature not supported by any open-source extension at the time of development.}
+\resumeItem{Wrote and deployed to K8s a deliberately vulnerable application in React.js and Express.js used as part of an internal competition.}
+\resumeItem{Researched at scale: Protobuf over WebSockets, XSS filter bypasses, and rich text editor vulnerabilities.}
+\resumeItem{Weaponised a 0-day in an online word processor to harvest employee credentials in a red team operation.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Hackathons \& Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\link{https://github.com/ECHO-LONDON/ECHO-Web}{\textbf{Echo}} $|$ \emph{Next.js $\cdot$ TailwindCSS $\cdot$ Vercel $\cdot$ Reddit, Twitter API + OAuth}}{}
+\resumeItemListStart
+\resumeItem{Most Promising AI x Web3 Build, 1st Prize @ Encode Club London AI Hackathon 2024}
+\resumeItem{Social media aggregator that provides personalised feed for users to regain control of their social media algorithms.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\link{https://github.com/zeyu2001/EduAble}{\textbf{EduAble}} $|$ \emph{Next.js $\cdot$ TailwindCSS $\cdot$ PostgreSQL $\cdot$ Vercel $\cdot$ OpenAI API}}{}
+\resumeItemListStart
+\resumeItem{2nd Place @ Cambridge Generative AI Hackathon 2024, Finalist @ Fitzelerate 2024}
+\resumeItem{STEM notetaking app with real-time audio transcription to Markdown \& LaTeX, and AI-generated summaries \& quizzes.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\link{https://github.com/zeyu2001/Ambrose}{\textbf{Ambrose}} $|$ \emph{TypeScript $\cdot$ React $\cdot$ TailwindCSS}}{}
+\resumeItemListStart
+\resumeItem{1,200+ downloads.}
+\resumeItem{Chrome extension that automatically answers trivia questions and reminds users of pending trivia quizzes in an online game.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\link{https://github.com/sebasyii/zeno}{\textbf{Zeno}} $|$ \emph{TypeScript $\cdot$ Express.js}}{}
+\resumeItemListStart
+\resumeItem{Finalist @ STACK the Codes Hackathon 2022}
+\resumeItem{Security middleware for Express.js that protects against injection attacks, application-level DoS, SSRF and IDOR vulnerabilities.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\link{https://chromewebstore.google.com/detail/charlotte/jkdoomkdcioheppgnmpakinhlgjflnem}{\textbf{Charlotte}} $|$ \emph{Flask $\cdot$ PostgreSQL $\cdot$ React}}{}
+\resumeItemListStart
+\resumeItem{Most Impactful Award @ Tech For Good Festival 2021}
+\resumeItem{Chrome extension that helps people with disabilities and the elderly to navigate the web with ease by providing accessibility improvements.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Professional Highlights}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Cybersecurity Vulnerability Research \& Bug Bounty}}{2022-2023}
+\resumeItemListStart
+\resumeItem{Uncovered several web security vulnerabilities in popular open-source software, credited for 15 vulnerabilities in the CVE database.}
+\resumeItem{Performed penetration tests for international companies through the HackerOne platform, uncovering >50 valid security issues.}
+\resumeItemSubListStart
+\resumeItem{Achieved maximum lifetime signal-to-noise rating across multiple private \& public programs, with zero invalid reports.}
+\resumeItem{Competed against top hackers from around the world and emerged as top bug bounty hunter in the invite-only Ministry of Defense Bug Bounty Programme 2022 and GovTech Government Bug Bounty Programme 2023.}
+\resumeItemSubListEnd
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+	      \textbf{Languages}{: TypeScript $\cdot$ Python $\cdot$ Java $\cdot$ OCaml $\cdot$ Go $\cdot$ SQL $\cdot$ \LaTeX} \\
+	      \textbf{Frameworks}{: React $\cdot$  Next.js $\cdot$ TailwindCSS $\cdot$  Prisma $\cdot$ Flask $\cdot$ Django} \\
+	      \textbf{Developer Tools}{: Git $\cdot$ Docker $\cdot$  Vagrant $\cdot$ Google Cloud Platform $\cdot$ Kubernetes $\cdot$ Unix} \\
+	      \textbf{Cybersecurity Certifications}{: OSCP $\cdot$ OSWE $\cdot$ CRT $\cdot$ Burp Suite Certified Practitioner}
+	      }}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
