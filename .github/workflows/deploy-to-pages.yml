@@ -15,7 +15,7 @@ jobs:
           sudo apt install -y libfontconfig1 libcairo2 libjpeg-turbo8
           sudo apt --fix-broken install
           wget https://github.com/pdf2htmlEX/pdf2htmlEX/releases/download/v0.18.8.rc1/pdf2htmlEX-0.18.8.rc1-master-20200630-Ubuntu-bionic-x86_64.deb
-          sudo apt install ./pdf2htmlEX.deb
+          sudo dpkg -i ./pdf2htmlEX.deb
 
       - name: Convert PDF to HTML
         run: pdf2htmlEX --embed cfijo --dest-dir out index.pdf
