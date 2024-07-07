@@ -95,11 +95,13 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-    \newcommand{\resumeItemSubListStart}{\begin{itemize}}
-        \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-    \newcommand{\resumeItemSubListEnd}{\end{itemize}}
+\newcommand{\resumeItemSubListStart}{\begin{itemize}\setlength\itemsep{0.4em}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemSubListEnd}{\end{itemize}}
+
+\fancyfoot[L]{\small \LaTeX\ Source: \link{https://github.com/zeyu2001/cv}{https://github.com/zeyu2001/cv}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,9 +125,11 @@
 	A.
 	(Hons) in Computer Science}{Cambridge, England}
 \resumeItemListStart
-\resumeItem{Grade: 1st Class.
-	Top performance in Discrete Maths, Operating Systems, Software \& Security Engineering.
+\resumeItem{\textbf{Grade: 1st Class.}
+	Highest mark for Object-Oriented Programming.
+	Top 5 in: Databases, Discrete Mathematics, Machine Learning \& Real-world Data, Software \& Security Engineering.
 }
+
 \resumeItem{Cybersecurity Society: Secretary (2024/25) -- Represented the University in various international competitions.}
 
 \resumeItemSubListStart
@@ -231,14 +235,27 @@
 \section{Professional Highlights}
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{Cybersecurity Vulnerability Research \& Bug Bounty}}{2022-2023}
+{\textbf{Cybersecurity Vulnerability Research \& Bug Bounty}}{2022 -- 2023}
 \resumeItemListStart
-\resumeItem{Uncovered several web security vulnerabilities in popular open-source software, credited for 15 vulnerabilities in the CVE database.}
-\resumeItem{Performed penetration tests for international companies through the HackerOne platform, uncovering >50 valid security issues.}
+\resumeItem{Uncovered web security vulnerabilities in popular open-source software.
+	Credited for 15 vulnerabilities in the CVE database.
+}
+\resumeItem{Performed penetration tests for global companies through the HackerOne platform, uncovering $>50$ valid security issues.}
 \resumeItemSubListStart
 \resumeItem{Achieved maximum lifetime signal-to-noise rating across multiple private \& public programs, with zero invalid reports.}
 \resumeItem{Competed against top hackers from around the world and emerged as top bug bounty hunter in the invite-only Ministry of Defense Bug Bounty Programme 2022 and GovTech Government Bug Bounty Programme 2023.}
 \resumeItemSubListEnd
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Cybersecurity Competitions}}{2022 -- 2023}
+\resumeItemListStart
+\resumeItem{Founded Social Engineering Experts, the top Singapore computer security Capture the Flag (CTF) team in 2022 and 2023.}
+\resumeItem{Core member and web security player for Blue Water, the global top CTF team in 2023.
+	Finalist @ DEF CON 31-32 CTF.
+}
+\resumeItem{Led organization of SEETF, a global competition with $>$2,000 players and near-perfect public voting scores in 2022-23.}
+\resumeItem{Built cybersecurity challenges attempted by thousands of players in competitions and on platforms such as Hack The Box.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
