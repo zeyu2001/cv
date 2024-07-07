@@ -19,7 +19,7 @@ jobs:
           sudo dpkg -i ./pdf2htmlEX.deb
 
       - name: Convert PDF to HTML
-        run: pdf2htmlEX --process-outline --zoom 1.3 --embed cfijo --dest-dir out index.pdf
+        run: pdf2htmlEX --process-outline --embed cfijo --dest-dir out index.pdf
 
       - name: Publish the web pages
         uses: peaceiris/actions-gh-pages@v3
