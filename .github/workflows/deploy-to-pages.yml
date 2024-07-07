@@ -6,13 +6,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rename
-        run: mv cv.tex index.tex
+      - name: Rename CV file
+        run: mv cv.pdf index.pdf
 
-      - name: Run make4ht
-        uses: docker://ghcr.io/michal-h21/make4ht-action:latest
-        env:
-          command: "make4ht -u -d out index.tex"
+      - name: Install pdf2htmlEX
+        run: |
+          sudo apt update
+          sudo apt install -y libfontconfig1 libcairo2 libjpeg-turbo8
+          sudo apt apt --fix-broken install
+          wget https://github.com/pdf2htmlEX/pdf2htmlEX/releases/download/v0.18.8.rc1/pdf2htmlEX-0.18.8.rc1-master-20200630-Ubuntu-bionic-x86_64.deb
+          sudo apt install ./pdf2htmlEX.deb
+
+      - name: Convert PDF to HTML
+        run: pdf2htmlEX --embed cfijo --dest-dir out index.pdf
 
       - name: Publish the web pages
         uses: peaceiris/actions-gh-pages@v3
