@@ -1,6 +1,5 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
@@ -18,6 +17,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[super]{nth}
+\usepackage{booktabs}
+\usepackage{accsupp}
 \input{glyphtounicode}
 
 %----------FONT OPTIONS----------
@@ -101,22 +103,32 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemSubListEnd}{\end{itemize}}
 
-\fancyfoot[L]{\small \LaTeX\ Source: \link{https://github.com/zeyu2001/cv}{https://github.com/zeyu2001/cv}}
+\newcommand{\awardsTable}[1]{
+	\begin{tabularx}{\textwidth}{llllll}
+	\emph{Name}	& \emph{Placing}	& \emph{Type}	& \emph{Scope}	& \emph{Awarder}                 & \emph{Year}       \\
+	\midrule\midrule
+	#1
+	\end{tabularx}
+}
+\newcommand{\awardsTableRow}[6]{
+	\BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5 & #6\EndAccSupp{} \\
+}
+
+\fancyfoot[L]{\small \LaTeX\ Source: \link{https://github.com/zeyu2001/cv}{github.com/zeyu2001/cv} $|$ Web Version: \link{https://zeyu2001.github.io/cv/}{zeyu2001.github.io/cv/}}
+\renewcommand\footrule{\hrule width\textwidth}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING----------
 \begin{center}
-	\textbf{\Huge \scshape Zeyu (Zayne) Zhang} \\ \vspace{1pt}
+	\textbf{\huge \scshape Zeyu (Zayne) Zhang} \\ \vspace{1pt}
 	\small \href{mailto:contact@zeyu2001.com}{\underline{contact@zeyu2001.com}} $|$
 	\href{https://zeyu2001.com}{\underline{zeyu2001.com}} $|$
 	\href{https://www.linkedin.com/in/zhang-zeyu}{\underline{www.linkedin.com/in/zhang-zeyu}}
 \end{center}
 
-%-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
@@ -149,23 +161,12 @@
 \section{Experience} \resumeSubHeadingListStart
 
 \resumeSubheading {Open Government Products}{Jun.
-	%-----------EXPERIENCE-----------
 	2024 -- Present}
 {Software Engineer Intern}{Singapore}
 \resumeItemListStart
 \resumeItem{Working on the organization's GitOps access control solution, which replaces previously ClickOps-heavy HR workflows.}
 \resumeItem{Shipped a Next.js app to visualize and preview changes to access control policies, reducing human error.}
 \resumeItemListEnd
-
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
 \resumeSubheading
 {Jane Street, Macquarie}{Mar. 2024 -- Apr. 2024}
@@ -235,9 +236,18 @@
 \section{Professional Highlights}
 \resumeSubHeadingListStart
 \resumeProjectHeading
+{\textbf{Speaking Engagements}}{}
+\resumeItemListStart
+\resumeItem{\emph{Client-Side Attacks in a Post-XSS World} -- pwnEd 5 (University of Edinburgh), BSides Cymru/Wales, 2024.}
+\resumeItem{\emph{XS-Leaks -- Client-Side Attacks in a Post-XSS World} -- BSides London, 2023.}
+\resumeItem{\emph{HTTP Request Smuggling in the Multiverse of Parsing Flaws} -- BSides Singapore, 2022.}
+\resumeItem{\emph{Learn Hacking Through CTF Competitions} -- Division Zero Bug Bounty Quarter, 2022.}
+\resumeItemListEnd
+
+\resumeProjectHeading
 {\textbf{Cybersecurity Vulnerability Research \& Bug Bounty}}{2022 -- 2023}
 \resumeItemListStart
-\resumeItem{Uncovered web security vulnerabilities in popular open-source software.
+\resumeItem{Discovered security vulnerabilities in popular open-source software.
 	Credited for 15 vulnerabilities in the CVE database.
 }
 \resumeItem{Performed penetration tests for global companies through the HackerOne platform, uncovering $>50$ valid security issues.}
@@ -259,8 +269,6 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%
-%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
@@ -271,5 +279,41 @@
 	      }}
 \end{itemize}
 
-%-------------------------------------------
+\setlength{\tabcolsep}{6.0pt}
+\renewcommand{\arraystretch}{1.1}
+
+\section{Honours \& Awards}
+
+\fontsize{8.5}{11}\selectfont
+\awardsTable{
+	\awardsTableRow{Encode Club London AI Hackathon}{\nth{1} Place, AI x Web3 Build}{Hackathon}{Global}{Encode Club}{2024}
+	\awardsTableRow{Cambridge Generative AI Hackathon}{\nth{2} Place}{Hackathon}{UK}{GetSeen Ventures}{2024}
+	\awardsTableRow{HackSingapore}{Finalist (Top 3)}{Hackathon}{SG}{Tribe}{2022}
+	\awardsTableRow{STACK the Codes Hackathon}{Finalist (Top 7)}{Hackathon}{SG}{GovTech}{2021}
+	\awardsTableRow{Tech For Good Festival}{Most Impactful}{Hackathon}{SG}{Engineering Good}{2021}
+	\awardsTableRow{Today I Learned AI Camp (University)}{\nth{4} Place}{AI Hackathon}{SG}{DSTA}{2021}
+	\hline
+	\awardsTableRow{Government Bug Bounty Programme 8--9}{Top Bug Bounty Hunter}{Bug Bounty}{Global}{GovTech}{2023}
+	\awardsTableRow{MINDEF Bug Bounty Programme}{Top Bug Bounty Hunter}{Bug Bounty}{Global}{MINDEF}{2022}
+	\hline
+	\awardsTableRow{LakeCTF}{\nth{1} (Finals)}{Security CTF}{Global}{EPFL}{2024}
+	\awardsTableRow{BSides Cymru/Wales Community CTF}{\nth{1} Place}{Security CTF}{UK}{Admiral}{2024}
+	\awardsTableRow{pwnEd 5}{\nth{1} (Qualifiers), \nth{1} (Finals)}{Security CTF}{UK}{University of Edinburgh}{2024}
+	\awardsTableRow{DEF CON CTF}{\nth{1} (Qualifiers), \nth{2} (Finals)}{Security CTF}{Global}{Nautilus Institute}{2023}
+	\awardsTableRow{HITCON CTF}{\nth{1} (Qualifiers), \nth{9} (Finals)}{Security CTF}{Global}{HITCON}{2023}
+	\awardsTableRow{CSAW CTF (Europe)}{\nth{1} (Qualifiers) \nth{3} (Finals)}{Security CTF}{Europe}{New York University}{2023}
+	\awardsTableRow{HackTM CTF}{\nth{2} (Finals)}{Security CTF}{Global}{HackTM}{2023}
+	\awardsTableRow{Grey Cat The Flag}{\nth{3} Place}{Security CTF}{Global}{National University of SG}{2023}
+	\awardsTableRow{Cyber Defenders Discovery Camp (Uni)}{\nth{3} Place}{Security CTF}{SG}{DSTA}{2022}
+	\awardsTableRow{Cyber SEA Games}{\nth{2} Place}{Security CTF}{SEA}{AJCCBC}{2022}
+	\hline
+	\awardsTableRow{Best in Knowledge (Cyber)}{-}{Military Award}{SG}{MINDEF/SAF}{2021}
+	\awardsTableRow{Distinguished Honor Graduate (Cyber)}{-}{Military Award}{SG}{MINDEF/SAF}{2021}
+	\hline
+	\awardsTableRow{National Olympiad for Informatics}{Bronze Award}{Programming}{SG}{National University of SG}{2019}
+	\hline
+	\awardsTableRow{Singapore Science \& Engineering Fair}{Best Poster Award}{Research}{SG}{MOE, A*STAR}{2019}
+	\awardsTableRow{Singapore Statistics Competition}{\nth{1} Place}{Research}{SG}{National University of SG}{2019}
+}
+
 \end{document}
