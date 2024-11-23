@@ -18,7 +18,7 @@ Then install the git hooks:
 pre-commit install
 ```
 
-The hook configuration is stored in `.pre-commit-config.yaml`. The specific hook being run is `latexindent`, and its behaviour can be configured in `.latexindent.yaml`.
+The hook configuration is stored in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). The specific hook being run is `latexindent`, and its behaviour can be configured in [`.latexindent.yaml`](.latexindent.yaml).
 
 ## VS Code Extension
 
@@ -26,7 +26,7 @@ It is also convenient to use the [LaTeX Workshop](https://marketplace.visualstud
 
 ## CI/CD
 
-This repository uses GitHub Actions to build the LaTeX files and deploy the HTML version to GitHub Pages. The workflow configuration is stored in `.github/workflows/main.yml`.
+This repository uses GitHub Actions to deploy the HTML version to GitHub Pages. The workflow configuration is stored in [`.github/workflows/deploy-to-pages.yml`](.github/workflows/deploy-to-pages.yml). It uses [https://github.com/pdf2htmlEX/pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX) to convert the PDF to HTML.
 
 ## License
 
