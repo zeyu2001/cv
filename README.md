@@ -22,11 +22,11 @@ The hook configuration is stored in [`.pre-commit-config.yaml`](.pre-commit-conf
 
 ## VS Code Extension
 
-It is also convenient to use the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension for VS Code to build and preview the LaTeX files. Configure the `latexindent` command line arguments in the extension settings to match the configuration in `.pre-commit-config.yaml`.
+It is also convenient to use the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension for VS Code to build and preview the LaTeX files. Configure the `latexindent` command line arguments in the extension settings to match the configuration in [`.pre-commit-config.yaml`](.pre-commit-config.yaml).
 
 ## CI/CD
 
-This repository uses GitHub Actions to deploy the HTML version to GitHub Pages. The workflow configuration is stored in [`.github/workflows/deploy-to-pages.yml`](.github/workflows/deploy-to-pages.yml). It uses [https://github.com/pdf2htmlEX/pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX) to convert the PDF to HTML.
+This repository uses GitHub Actions to deploy the HTML version to GitHub Pages. The workflow configuration is stored in [`.github/workflows/deploy-to-pages.yml`](.github/workflows/deploy-to-pages.yml). It uses [pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX) to convert the PDF to HTML.
 
 ## License
 
